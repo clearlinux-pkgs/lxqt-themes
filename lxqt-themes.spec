@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-themes
-Version  : 0.15.0
-Release  : 4
-URL      : https://github.com/lxqt/lxqt-themes/releases/download/0.15.0/lxqt-themes-0.15.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-themes/releases/download/0.15.0/lxqt-themes-0.15.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-themes/releases/download/0.15.0/lxqt-themes-0.15.0.tar.xz.asc
+Version  : 0.16.0
+Release  : 5
+URL      : https://github.com/lxqt/lxqt-themes/releases/download/0.16.0/lxqt-themes-0.16.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-themes/releases/download/0.16.0/lxqt-themes-0.16.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-themes/releases/download/0.16.0/lxqt-themes-0.16.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -17,7 +17,7 @@ Requires: lxqt-themes-data = %{version}-%{release}
 Requires: lxqt-themes-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
-BuildRequires : liblxqt-dev
+BuildRequires : liblxqt-data
 BuildRequires : lxqt-build-tools
 
 %description
@@ -42,15 +42,15 @@ license components for the lxqt-themes package.
 
 
 %prep
-%setup -q -n lxqt-themes-0.15.0
-cd %{_builddir}/lxqt-themes-0.15.0
+%setup -q -n lxqt-themes-0.16.0
+cd %{_builddir}/lxqt-themes-0.16.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1598908332
+export SOURCE_DATE_EPOCH=1604544384
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -63,10 +63,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1598908332
+export SOURCE_DATE_EPOCH=1604544384
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-themes
-cp %{_builddir}/lxqt-themes-0.15.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-themes/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-themes-0.16.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-themes/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -90,6 +90,33 @@ popd
 /usr/share/lxqt/graphics/spacer-dark-line.svg
 /usr/share/lxqt/graphics/spacer-light-dots.svg
 /usr/share/lxqt/graphics/spacer-light-line.svg
+/usr/share/lxqt/themes/Clearlooks/arrow-right-selected.svg
+/usr/share/lxqt/themes/Clearlooks/arrow-right.svg
+/usr/share/lxqt/themes/Clearlooks/calendar-popup/left-arrow.svg
+/usr/share/lxqt/themes/Clearlooks/calendar-popup/right-arrow.svg
+/usr/share/lxqt/themes/Clearlooks/lxqt-notificationd.qss
+/usr/share/lxqt/themes/Clearlooks/lxqt-notificationd/cancel.svg
+/usr/share/lxqt/themes/Clearlooks/lxqt-panel.qss
+/usr/share/lxqt/themes/Clearlooks/lxqt-runner.qss
+/usr/share/lxqt/themes/Clearlooks/lxqt-runner/close.svg
+/usr/share/lxqt/themes/Clearlooks/lxqt-runner/down-arrow.svg
+/usr/share/lxqt/themes/Clearlooks/mainmenu.svg
+/usr/share/lxqt/themes/Clearlooks/preview.png
+/usr/share/lxqt/themes/Clearlooks/spacer-plugin/spacer-dots.svg
+/usr/share/lxqt/themes/Clearlooks/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/Leech/arrow-right.svg
+/usr/share/lxqt/themes/Leech/calendar-popup/left-arrow.svg
+/usr/share/lxqt/themes/Leech/calendar-popup/right-arrow.svg
+/usr/share/lxqt/themes/Leech/lxqt-notificationd.qss
+/usr/share/lxqt/themes/Leech/lxqt-notificationd/cancel.svg
+/usr/share/lxqt/themes/Leech/lxqt-panel.qss
+/usr/share/lxqt/themes/Leech/lxqt-runner.qss
+/usr/share/lxqt/themes/Leech/lxqt-runner/close.svg
+/usr/share/lxqt/themes/Leech/lxqt-runner/down-arrow.svg
+/usr/share/lxqt/themes/Leech/mainmenu.svg
+/usr/share/lxqt/themes/Leech/preview.png
+/usr/share/lxqt/themes/Leech/spacer-plugin/spacer-dots.svg
+/usr/share/lxqt/themes/Leech/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/ambiance/Butterfly-Kenneth-Wimer.jpg
 /usr/share/lxqt/themes/ambiance/arrow-left.svg
 /usr/share/lxqt/themes/ambiance/arrow-right.svg
@@ -154,6 +181,26 @@ popd
 /usr/share/lxqt/themes/kde-plasma/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/kde-plasma/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/kde-plasma/wallpaper.cfg
+/usr/share/lxqt/themes/kvantum/lxqt-config.qss
+/usr/share/lxqt/themes/kvantum/lxqt-notificationd.qss
+/usr/share/lxqt/themes/kvantum/lxqt-panel.qss
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-left-selected.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-left.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-right-selected.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-right.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/checked.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/mainmenu.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/plugin-handle-horizontal.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/plugin-handle-vertical.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/radio-checked.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/radio-unchecked.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/unchecked.svg
+/usr/share/lxqt/themes/kvantum/lxqt-runner.qss
+/usr/share/lxqt/themes/kvantum/lxqt-runner/close.svg
+/usr/share/lxqt/themes/kvantum/lxqt-runner/down.svg
+/usr/share/lxqt/themes/kvantum/preview.png
+/usr/share/lxqt/themes/kvantum/spacer-plugin/spacer-dots.svg
+/usr/share/lxqt/themes/kvantum/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/light/96640-simple_blue_widescreen.svg
 /usr/share/lxqt/themes/light/lxqt-lightdm-greeter/dropdown.svg
 /usr/share/lxqt/themes/light/lxqt-lightdm-greeter/leaveIcon.svg
