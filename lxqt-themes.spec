@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-themes
-Version  : 0.17.0
-Release  : 6
-URL      : https://github.com/lxqt/lxqt-themes/releases/download/0.17.0/lxqt-themes-0.17.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-themes/releases/download/0.17.0/lxqt-themes-0.17.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-themes/releases/download/0.17.0/lxqt-themes-0.17.0.tar.xz.asc
+Version  : 1.0.0
+Release  : 7
+URL      : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -42,15 +42,15 @@ license components for the lxqt-themes package.
 
 
 %prep
-%setup -q -n lxqt-themes-0.17.0
-cd %{_builddir}/lxqt-themes-0.17.0
+%setup -q -n lxqt-themes-1.0.0
+cd %{_builddir}/lxqt-themes-1.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618499788
+export SOURCE_DATE_EPOCH=1636129737
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -63,10 +63,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1618499788
+export SOURCE_DATE_EPOCH=1636129737
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-themes
-cp %{_builddir}/lxqt-themes-0.17.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-themes/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-themes-1.0.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-themes/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -90,10 +90,31 @@ popd
 /usr/share/lxqt/graphics/spacer-dark-line.svg
 /usr/share/lxqt/graphics/spacer-light-dots.svg
 /usr/share/lxqt/graphics/spacer-light-line.svg
+/usr/share/lxqt/themes/Arch-Colors/arrow-right.svg
+/usr/share/lxqt/themes/Arch-Colors/calendar-popup/left-arrow.svg
+/usr/share/lxqt/themes/Arch-Colors/calendar-popup/right-arrow.svg
+/usr/share/lxqt/themes/Arch-Colors/checked.svg
+/usr/share/lxqt/themes/Arch-Colors/color-picker.svg
+/usr/share/lxqt/themes/Arch-Colors/lxqt-notificationd.qss
+/usr/share/lxqt/themes/Arch-Colors/lxqt-panel.qss
+/usr/share/lxqt/themes/Arch-Colors/lxqt-runner.qss
+/usr/share/lxqt/themes/Arch-Colors/lxqt-runner/close.svg
+/usr/share/lxqt/themes/Arch-Colors/lxqt-runner/down-arrow.svg
+/usr/share/lxqt/themes/Arch-Colors/lxqt-sudo.qss
+/usr/share/lxqt/themes/Arch-Colors/mainmenu-arch.svg
+/usr/share/lxqt/themes/Arch-Colors/mainmenu.svg
+/usr/share/lxqt/themes/Arch-Colors/plasma_arch.png
+/usr/share/lxqt/themes/Arch-Colors/preview.png
+/usr/share/lxqt/themes/Arch-Colors/spacer-plugin/spacer-dots.svg
+/usr/share/lxqt/themes/Arch-Colors/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/Arch-Colors/unchecked.svg
+/usr/share/lxqt/themes/Arch-Colors/wallpaper.cfg
 /usr/share/lxqt/themes/Clearlooks/arrow-right-selected.svg
 /usr/share/lxqt/themes/Clearlooks/arrow-right.svg
 /usr/share/lxqt/themes/Clearlooks/calendar-popup/left-arrow.svg
 /usr/share/lxqt/themes/Clearlooks/calendar-popup/right-arrow.svg
+/usr/share/lxqt/themes/Clearlooks/checked-selected.svg
+/usr/share/lxqt/themes/Clearlooks/checked.svg
 /usr/share/lxqt/themes/Clearlooks/lxqt-notificationd.qss
 /usr/share/lxqt/themes/Clearlooks/lxqt-notificationd/cancel.svg
 /usr/share/lxqt/themes/Clearlooks/lxqt-panel.qss
@@ -104,9 +125,12 @@ popd
 /usr/share/lxqt/themes/Clearlooks/preview.png
 /usr/share/lxqt/themes/Clearlooks/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/Clearlooks/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/Clearlooks/unchecked-selected.svg
+/usr/share/lxqt/themes/Clearlooks/unchecked.svg
 /usr/share/lxqt/themes/Leech/arrow-right.svg
 /usr/share/lxqt/themes/Leech/calendar-popup/left-arrow.svg
 /usr/share/lxqt/themes/Leech/calendar-popup/right-arrow.svg
+/usr/share/lxqt/themes/Leech/checked.svg
 /usr/share/lxqt/themes/Leech/lxqt-notificationd.qss
 /usr/share/lxqt/themes/Leech/lxqt-notificationd/cancel.svg
 /usr/share/lxqt/themes/Leech/lxqt-panel.qss
@@ -117,9 +141,11 @@ popd
 /usr/share/lxqt/themes/Leech/preview.png
 /usr/share/lxqt/themes/Leech/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/Leech/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/Leech/unchecked.svg
 /usr/share/lxqt/themes/ambiance/Butterfly-Kenneth-Wimer.jpg
 /usr/share/lxqt/themes/ambiance/arrow-left.svg
 /usr/share/lxqt/themes/ambiance/arrow-right.svg
+/usr/share/lxqt/themes/ambiance/checked.svg
 /usr/share/lxqt/themes/ambiance/lxqt-notificationd.qss
 /usr/share/lxqt/themes/ambiance/lxqt-notificationd/cancel.svg
 /usr/share/lxqt/themes/ambiance/lxqt-panel.qss
@@ -130,6 +156,7 @@ popd
 /usr/share/lxqt/themes/ambiance/preview.png
 /usr/share/lxqt/themes/ambiance/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/ambiance/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/ambiance/unchecked.svg
 /usr/share/lxqt/themes/ambiance/wallpaper.cfg
 /usr/share/lxqt/themes/dark/arrow-right.svg
 /usr/share/lxqt/themes/dark/calendar-popup/left-arrow.svg
@@ -165,6 +192,7 @@ popd
 /usr/share/lxqt/themes/frost/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/frost/volume-plugin/mixer.svg
 /usr/share/lxqt/themes/frost/wallpaper.cfg
+/usr/share/lxqt/themes/kde-plasma/checked.svg
 /usr/share/lxqt/themes/kde-plasma/kde-plasma.png
 /usr/share/lxqt/themes/kde-plasma/left-arrow.svg
 /usr/share/lxqt/themes/kde-plasma/lxqt-notificationd.qss
@@ -180,20 +208,26 @@ popd
 /usr/share/lxqt/themes/kde-plasma/right-arrow.svg
 /usr/share/lxqt/themes/kde-plasma/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/kde-plasma/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/kde-plasma/unchecked.svg
 /usr/share/lxqt/themes/kde-plasma/wallpaper.cfg
 /usr/share/lxqt/themes/kvantum/lxqt-config.qss
 /usr/share/lxqt/themes/kvantum/lxqt-notificationd.qss
 /usr/share/lxqt/themes/kvantum/lxqt-panel.qss
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-down-selected.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-down.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-left-selected.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-left.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-right-selected.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-right.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-up-selected.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/arrow-up.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/checked.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/mainmenu.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/plugin-handle-horizontal.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/plugin-handle-vertical.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/radio-checked.svg
 /usr/share/lxqt/themes/kvantum/lxqt-panel/radio-unchecked.svg
+/usr/share/lxqt/themes/kvantum/lxqt-panel/slidercursor.png
 /usr/share/lxqt/themes/kvantum/lxqt-panel/unchecked.svg
 /usr/share/lxqt/themes/kvantum/lxqt-runner.qss
 /usr/share/lxqt/themes/kvantum/lxqt-runner/close.svg
@@ -217,7 +251,26 @@ popd
 /usr/share/lxqt/themes/light/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/light/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/light/wallpaper.cfg
+/usr/share/lxqt/themes/silver/arrow-right.svg
+/usr/share/lxqt/themes/silver/beam.png
+/usr/share/lxqt/themes/silver/calendar-popup/left-arrow.svg
+/usr/share/lxqt/themes/silver/calendar-popup/right-arrow.svg
+/usr/share/lxqt/themes/silver/checked.svg
+/usr/share/lxqt/themes/silver/color-picker.svg
+/usr/share/lxqt/themes/silver/lxqt-notificationd.qss
+/usr/share/lxqt/themes/silver/lxqt-panel.qss
+/usr/share/lxqt/themes/silver/lxqt-runner.qss
+/usr/share/lxqt/themes/silver/lxqt-runner/close.svg
+/usr/share/lxqt/themes/silver/lxqt-runner/down-arrow.svg
+/usr/share/lxqt/themes/silver/lxqt-sudo.qss
+/usr/share/lxqt/themes/silver/mainmenu.svg
+/usr/share/lxqt/themes/silver/preview.png
+/usr/share/lxqt/themes/silver/spacer-plugin/spacer-dots.svg
+/usr/share/lxqt/themes/silver/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/silver/unchecked.svg
+/usr/share/lxqt/themes/silver/wallpaper.cfg
 /usr/share/lxqt/themes/system/lxqt-panel.qss
+/usr/share/lxqt/themes/system/mainmenu.svg
 /usr/share/lxqt/themes/system/preview.png
 /usr/share/lxqt/themes/system/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/system/spacer-plugin/spacer-line.svg
