@@ -6,7 +6,7 @@
 #
 Name     : lxqt-themes
 Version  : 1.0.0
-Release  : 8
+Release  : 9
 URL      : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz
 Source0  : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz
 Source1  : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz.asc
@@ -50,7 +50,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636129737
+export SOURCE_DATE_EPOCH=1636135824
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -63,7 +63,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1636129737
+export SOURCE_DATE_EPOCH=1636135824
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-themes
 cp %{_builddir}/lxqt-themes-1.0.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-themes/7fab4cd4eb7f499d60fe183607f046484acd6e2d
