@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-themes
-Version  : 1.0.0
-Release  : 9
-URL      : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-themes/releases/download/1.0.0/lxqt-themes-1.0.0.tar.xz.asc
+Version  : 1.1.0
+Release  : 10
+URL      : https://github.com/lxqt/lxqt-themes/releases/download/1.1.0/lxqt-themes-1.1.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-themes/releases/download/1.1.0/lxqt-themes-1.1.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-themes/releases/download/1.1.0/lxqt-themes-1.1.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -42,15 +42,15 @@ license components for the lxqt-themes package.
 
 
 %prep
-%setup -q -n lxqt-themes-1.0.0
-cd %{_builddir}/lxqt-themes-1.0.0
+%setup -q -n lxqt-themes-1.1.0
+cd %{_builddir}/lxqt-themes-1.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636135824
+export SOURCE_DATE_EPOCH=1650124346
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -63,10 +63,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1636135824
+export SOURCE_DATE_EPOCH=1650124346
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-themes
-cp %{_builddir}/lxqt-themes-1.0.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-themes/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-themes-1.1.0/COPYING %{buildroot}/usr/share/package-licenses/lxqt-themes/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -79,17 +79,33 @@ popd
 /usr/share/icons/hicolor/scalable/apps/lxqt.svg
 /usr/share/icons/hicolor/scalable/places/start-here-lxqt.svg
 /usr/share/lxqt/graphics/README
+/usr/share/lxqt/graphics/helix-bright.png
+/usr/share/lxqt/graphics/helix-lxqt-shadow.png
+/usr/share/lxqt/graphics/helix-shadow-effect.png
 /usr/share/lxqt/graphics/helix.svg
 /usr/share/lxqt/graphics/helix_1120.png
 /usr/share/lxqt/graphics/helix_150.png
 /usr/share/lxqt/graphics/helix_60.png
+/usr/share/lxqt/graphics/helix_blue_shadow.png
 /usr/share/lxqt/graphics/helix_lxqt.svg
+/usr/share/lxqt/graphics/helix_shadow.png
+/usr/share/lxqt/graphics/helix_white_shadow.png
 /usr/share/lxqt/graphics/lxqt_logo.png
 /usr/share/lxqt/graphics/lxqt_logo_doxygen.png
 /usr/share/lxqt/graphics/spacer-dark-dots.svg
 /usr/share/lxqt/graphics/spacer-dark-line.svg
 /usr/share/lxqt/graphics/spacer-light-dots.svg
 /usr/share/lxqt/graphics/spacer-light-line.svg
+/usr/share/lxqt/palettes/Ambiance
+/usr/share/lxqt/palettes/Arch-Colors
+/usr/share/lxqt/palettes/Dark
+/usr/share/lxqt/palettes/Leech
+/usr/share/lxqt/palettes/Silver-bright
+/usr/share/lxqt/palettes/Silver-dark
+/usr/share/lxqt/palettes/Valendas
+/usr/share/lxqt/themes/Arch-Colors/arrow-left-selected.svg
+/usr/share/lxqt/themes/Arch-Colors/arrow-left.svg
+/usr/share/lxqt/themes/Arch-Colors/arrow-right-selected.svg
 /usr/share/lxqt/themes/Arch-Colors/arrow-right.svg
 /usr/share/lxqt/themes/Arch-Colors/calendar-popup/left-arrow.svg
 /usr/share/lxqt/themes/Arch-Colors/calendar-popup/right-arrow.svg
@@ -103,12 +119,13 @@ popd
 /usr/share/lxqt/themes/Arch-Colors/lxqt-sudo.qss
 /usr/share/lxqt/themes/Arch-Colors/mainmenu-arch.svg
 /usr/share/lxqt/themes/Arch-Colors/mainmenu.svg
-/usr/share/lxqt/themes/Arch-Colors/plasma_arch.png
 /usr/share/lxqt/themes/Arch-Colors/preview.png
 /usr/share/lxqt/themes/Arch-Colors/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/Arch-Colors/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/Arch-Colors/unchecked.svg
 /usr/share/lxqt/themes/Arch-Colors/wallpaper.cfg
+/usr/share/lxqt/themes/Clearlooks/arrow-left-selected.svg
+/usr/share/lxqt/themes/Clearlooks/arrow-left.svg
 /usr/share/lxqt/themes/Clearlooks/arrow-right-selected.svg
 /usr/share/lxqt/themes/Clearlooks/arrow-right.svg
 /usr/share/lxqt/themes/Clearlooks/calendar-popup/left-arrow.svg
@@ -127,6 +144,25 @@ popd
 /usr/share/lxqt/themes/Clearlooks/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/Clearlooks/unchecked-selected.svg
 /usr/share/lxqt/themes/Clearlooks/unchecked.svg
+/usr/share/lxqt/themes/Clearlooks/wallpaper.cfg
+/usr/share/lxqt/themes/KDE-Plasma/checked.svg
+/usr/share/lxqt/themes/KDE-Plasma/left-arrow.svg
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-notificationd.qss
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-notificationd/window-close.svg
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-panel.qss
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-runner.qss
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-runner/application-menu.svg
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-runner/close-32x32.png
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-runner/close-48x48.png
+/usr/share/lxqt/themes/KDE-Plasma/lxqt-runner/window-close.svg
+/usr/share/lxqt/themes/KDE-Plasma/mainmenu.svg
+/usr/share/lxqt/themes/KDE-Plasma/preview.png
+/usr/share/lxqt/themes/KDE-Plasma/right-arrow.svg
+/usr/share/lxqt/themes/KDE-Plasma/spacer-plugin/spacer-dots.svg
+/usr/share/lxqt/themes/KDE-Plasma/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/KDE-Plasma/unchecked.svg
+/usr/share/lxqt/themes/KDE-Plasma/wallpaper.cfg
+/usr/share/lxqt/themes/Leech/arrow-left.svg
 /usr/share/lxqt/themes/Leech/arrow-right.svg
 /usr/share/lxqt/themes/Leech/calendar-popup/left-arrow.svg
 /usr/share/lxqt/themes/Leech/calendar-popup/right-arrow.svg
@@ -142,7 +178,23 @@ popd
 /usr/share/lxqt/themes/Leech/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/Leech/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/Leech/unchecked.svg
-/usr/share/lxqt/themes/ambiance/Butterfly-Kenneth-Wimer.jpg
+/usr/share/lxqt/themes/Leech/wallpaper.cfg
+/usr/share/lxqt/themes/Valendas/arrow-left-selected.svg
+/usr/share/lxqt/themes/Valendas/arrow-left.svg
+/usr/share/lxqt/themes/Valendas/arrow-right-selected.svg
+/usr/share/lxqt/themes/Valendas/arrow-right.svg
+/usr/share/lxqt/themes/Valendas/calendar-popup/left-arrow.svg
+/usr/share/lxqt/themes/Valendas/calendar-popup/right-arrow.svg
+/usr/share/lxqt/themes/Valendas/lxqt-notificationd.qss
+/usr/share/lxqt/themes/Valendas/lxqt-panel.qss
+/usr/share/lxqt/themes/Valendas/lxqt-runner/close.svg
+/usr/share/lxqt/themes/Valendas/lxqt-runner/down-arrow.svg
+/usr/share/lxqt/themes/Valendas/lxqt-sudo.qss
+/usr/share/lxqt/themes/Valendas/mainmenu.svg
+/usr/share/lxqt/themes/Valendas/preview.png
+/usr/share/lxqt/themes/Valendas/spacer-plugin/spacer-dots.svg
+/usr/share/lxqt/themes/Valendas/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/Valendas/wallpaper.cfg
 /usr/share/lxqt/themes/ambiance/arrow-left.svg
 /usr/share/lxqt/themes/ambiance/arrow-right.svg
 /usr/share/lxqt/themes/ambiance/checked.svg
@@ -158,6 +210,7 @@ popd
 /usr/share/lxqt/themes/ambiance/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/ambiance/unchecked.svg
 /usr/share/lxqt/themes/ambiance/wallpaper.cfg
+/usr/share/lxqt/themes/dark/arrow-left.svg
 /usr/share/lxqt/themes/dark/arrow-right.svg
 /usr/share/lxqt/themes/dark/calendar-popup/left-arrow.svg
 /usr/share/lxqt/themes/dark/calendar-popup/right-arrow.svg
@@ -174,14 +227,12 @@ popd
 /usr/share/lxqt/themes/dark/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/dark/unchecked.svg
 /usr/share/lxqt/themes/dark/wallpaper.cfg
-/usr/share/lxqt/themes/dark/wallpaper.png
+/usr/share/lxqt/themes/frost/arrow-left.svg
 /usr/share/lxqt/themes/frost/arrow-right.svg
 /usr/share/lxqt/themes/frost/calendar-popup/left-arrow.svg
 /usr/share/lxqt/themes/frost/calendar-popup/right-arrow.svg
-/usr/share/lxqt/themes/frost/color-picker.svg
 /usr/share/lxqt/themes/frost/debug.png
 /usr/share/lxqt/themes/frost/lxqt-notificationd.qss
-/usr/share/lxqt/themes/frost/lxqt-origami-light.png
 /usr/share/lxqt/themes/frost/lxqt-panel.qss
 /usr/share/lxqt/themes/frost/lxqt-runner.qss
 /usr/share/lxqt/themes/frost/lxqt-runner/close.svg
@@ -192,24 +243,6 @@ popd
 /usr/share/lxqt/themes/frost/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/frost/volume-plugin/mixer.svg
 /usr/share/lxqt/themes/frost/wallpaper.cfg
-/usr/share/lxqt/themes/kde-plasma/checked.svg
-/usr/share/lxqt/themes/kde-plasma/kde-plasma.png
-/usr/share/lxqt/themes/kde-plasma/left-arrow.svg
-/usr/share/lxqt/themes/kde-plasma/lxqt-notificationd.qss
-/usr/share/lxqt/themes/kde-plasma/lxqt-notificationd/window-close.svg
-/usr/share/lxqt/themes/kde-plasma/lxqt-panel.qss
-/usr/share/lxqt/themes/kde-plasma/lxqt-runner.qss
-/usr/share/lxqt/themes/kde-plasma/lxqt-runner/application-menu.svg
-/usr/share/lxqt/themes/kde-plasma/lxqt-runner/close-32x32.png
-/usr/share/lxqt/themes/kde-plasma/lxqt-runner/close-48x48.png
-/usr/share/lxqt/themes/kde-plasma/lxqt-runner/window-close.svg
-/usr/share/lxqt/themes/kde-plasma/mainmenu.svg
-/usr/share/lxqt/themes/kde-plasma/preview.png
-/usr/share/lxqt/themes/kde-plasma/right-arrow.svg
-/usr/share/lxqt/themes/kde-plasma/spacer-plugin/spacer-dots.svg
-/usr/share/lxqt/themes/kde-plasma/spacer-plugin/spacer-line.svg
-/usr/share/lxqt/themes/kde-plasma/unchecked.svg
-/usr/share/lxqt/themes/kde-plasma/wallpaper.cfg
 /usr/share/lxqt/themes/kvantum/lxqt-config.qss
 /usr/share/lxqt/themes/kvantum/lxqt-notificationd.qss
 /usr/share/lxqt/themes/kvantum/lxqt-panel.qss
@@ -235,7 +268,7 @@ popd
 /usr/share/lxqt/themes/kvantum/preview.png
 /usr/share/lxqt/themes/kvantum/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/kvantum/spacer-plugin/spacer-line.svg
-/usr/share/lxqt/themes/light/96640-simple_blue_widescreen.svg
+/usr/share/lxqt/themes/kvantum/wallpaper.cfg
 /usr/share/lxqt/themes/light/lxqt-lightdm-greeter/dropdown.svg
 /usr/share/lxqt/themes/light/lxqt-lightdm-greeter/leaveIcon.svg
 /usr/share/lxqt/themes/light/lxqt-notificationd.qss
@@ -247,16 +280,17 @@ popd
 /usr/share/lxqt/themes/light/lxqt-runner/close-48x48.png
 /usr/share/lxqt/themes/light/mainmenu.svg
 /usr/share/lxqt/themes/light/preview.png
-/usr/share/lxqt/themes/light/simple_blue_widescreen.png
 /usr/share/lxqt/themes/light/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/light/spacer-plugin/spacer-line.svg
 /usr/share/lxqt/themes/light/wallpaper.cfg
+/usr/share/lxqt/themes/silver/arrow-left-selected.svg
+/usr/share/lxqt/themes/silver/arrow-left.svg
+/usr/share/lxqt/themes/silver/arrow-right-selected.svg
 /usr/share/lxqt/themes/silver/arrow-right.svg
 /usr/share/lxqt/themes/silver/beam.png
 /usr/share/lxqt/themes/silver/calendar-popup/left-arrow.svg
 /usr/share/lxqt/themes/silver/calendar-popup/right-arrow.svg
 /usr/share/lxqt/themes/silver/checked.svg
-/usr/share/lxqt/themes/silver/color-picker.svg
 /usr/share/lxqt/themes/silver/lxqt-notificationd.qss
 /usr/share/lxqt/themes/silver/lxqt-panel.qss
 /usr/share/lxqt/themes/silver/lxqt-runner.qss
@@ -274,6 +308,32 @@ popd
 /usr/share/lxqt/themes/system/preview.png
 /usr/share/lxqt/themes/system/spacer-plugin/spacer-dots.svg
 /usr/share/lxqt/themes/system/spacer-plugin/spacer-line.svg
+/usr/share/lxqt/themes/system/wallpaper.cfg
+/usr/share/lxqt/wallpapers/Butterfly-Kenneth-Wimer.jpg
+/usr/share/lxqt/wallpapers/License
+/usr/share/lxqt/wallpapers/Valendas.png
+/usr/share/lxqt/wallpapers/after-the-rain.jpg
+/usr/share/lxqt/wallpapers/appleflower.png
+/usr/share/lxqt/wallpapers/beam.png
+/usr/share/lxqt/wallpapers/butterfly.png
+/usr/share/lxqt/wallpapers/cloud.png
+/usr/share/lxqt/wallpapers/drop.png
+/usr/share/lxqt/wallpapers/flowers.png
+/usr/share/lxqt/wallpapers/fog.jpg
+/usr/share/lxqt/wallpapers/kde-plasma.png
+/usr/share/lxqt/wallpapers/lxqt-origami-green.png
+/usr/share/lxqt/wallpapers/origami-bright-logo.png
+/usr/share/lxqt/wallpapers/origami-dark.png
+/usr/share/lxqt/wallpapers/origami-light.png
+/usr/share/lxqt/wallpapers/plasma-logo-bright.png
+/usr/share/lxqt/wallpapers/plasma-logo-dark.png
+/usr/share/lxqt/wallpapers/plasma_arch.png
+/usr/share/lxqt/wallpapers/simple_blue_widescreen.png
+/usr/share/lxqt/wallpapers/this-is-not-windows.jpg
+/usr/share/lxqt/wallpapers/triangles-logo.png
+/usr/share/lxqt/wallpapers/triangles.png
+/usr/share/lxqt/wallpapers/waves-logo.png
+/usr/share/lxqt/wallpapers/waves-purple-logo.jpg
 
 %files license
 %defattr(0644,root,root,0755)
